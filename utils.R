@@ -51,3 +51,9 @@ bench::system_time(
     filter(count > 20, dist < 2000, !is.na(delay))
 )
 
+# It is often useful to save the results of your analysis or the tables that you
+# have generated on your Spark cluster into persistent storage. The best option
+# in many scenarios is to write the table out to a Parquet file using the
+# spark_write_parquet function. For example:
+
+# spark_write_parquet(tbl, "hdfs://hdfs.company.org:9000/hdfs-path/data")
